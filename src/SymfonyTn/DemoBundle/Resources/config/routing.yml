@@ -1,0 +1,8 @@
+
+SymfonyTnDemoBundle_admin:
+        resource: "@SymfonyTnDemoBundle/Resources/config/routing/news.yml"
+        prefix:   /admin
+        
+SymfonyTnDemoBundle_home:
+        resource: "@SymfonyTnDemoBundle/Resources/config/routing/home.yml"
+        prefix:   /

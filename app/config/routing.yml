@@ -1,0 +1,4 @@
+symfony_tn_demo:
+    resource: "@SymfonyTnDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+

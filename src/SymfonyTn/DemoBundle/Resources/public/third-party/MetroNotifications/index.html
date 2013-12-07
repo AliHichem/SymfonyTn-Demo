@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Metro Notifications by scriptgates.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="static/css/MetroNotificationStyle.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="static/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="static/js/scriptgates.js"></script>
+    </head>
+    <body>
+        <button id="MetroUnloadingButton" onClick="Close()" style="display:none">Call 'MetroUnLoading'</button>
+        <div class="BoxContainer">
+            <span class="title purp">Metro Notifications free for you by scriptgates.com</span>
+            <span class="subtitle">All the plugins you will need to interact with the user.</span>
+            <br /><br />
+            <div class="contentBox">
+                <span class="inBoxTitle green">Small Notification</span>
+                <p>With Images! (timeout 4 sec)</p>
+                <button class="botGreen" id="botSmallPic1">Picture 1</button>
+                <button class="botGreen" id="botSmallPic2">Picture 2</button>
+                <button class="botGreen" id="botSmallPic3">Picture 3</button>
+                <br /><br />
+                <span class="inBoxTitle teal">Simple Small Notification</span>
+                <p>With no Images! (timeout 4 sec)</p>
+                <button class="botTeal" id="botSimple1">Simple 1</button>
+                <button class="botTeal" id="botSimple2">Simple 2</button>
+                <button class="botTeal" id="botSimple3">Simple 3</button>
+                <br /><br />
+                <span class="inBoxTitle orange">Custom Small Notification</span>
+                <p>With Images! No timeout, click to close and callback</p>
+                <button class="botOrange" id="botSmallCustom1">Custom 1</button>
+                <button class="botOrange" id="botSmallCustom2">Custom 2</button>
+                <button class="botOrange" id="botSmallCustom3">Custom 3</button>
+            </div>
+            <div class="contentBox">
+                <span class="inBoxTitle teal2">Big Notifications</span>
+                <p>Stackable Big Notifications with Timeout</p>
+                <button class="botTeal2" id="BigBox1">BigBox 1</button>
+                <button class="botTeal2" id="BigBox2">BigBox 2</button>
+                <button class="botTeal2" id="BigBox3">BigBox 3</button>
+                <br /><br />
+                <span class="inBoxTitle pink">Big Notifications 2</span>
+                <p>Stackable Big Notifications with callback</p>
+                <button class="botPink" id="BigBoxCall1">BigBox 1</button>
+                <button class="botPink" id="BigBoxCall2">BigBox 2</button>
+                <button class="botPink" id="BigBoxCall3">BigBox 3</button>
+            </div>
+            <p class="pSpacer" />
+            <span class="title red">Alerts, Confirmations and Inputs</span>
+            <span class="subtitle">You can customize a lot of things or work with the defaults</span>
+            <br /><br />
+            <div class="contentBox">
+                <span class="inBoxTitle blue">Message box Alert!</span>
+                <p>Stackable Big Notifications with callback</p>
+                <button class="botBlue" id="botMessage1">MsgBox 1</button>
+                <button class="botBlue" id="botMessage2">MsgBox 2</button>
+                <button class="botBlue" id="botMessage3">MsgBox 3</button>
+                <br /><br />
+                <span class="inBoxTitle green">Message box with Custom Bottons</span>
+                <p>Stackable Big Notifications with callback</p>
+                <button class="botGreen" id="botMultiMessage1">2 Buttons</button>
+                <button class="botGreen" id="botMultiMessage2">3 Buttons</button>
+                <button class="botGreen" id="botMultiMessage3">Many Buttons!</button>
+                <br /><br />
+                <span class="inBoxTitle yellow">Recursive Messagebox!</span>
+                <p>Call another messagebox after a messagebox</p>
+                <button class="botYellow" id="botRecursive1">2 Alerts</button>
+                <button class="botYellow" id="botRecursive2">3 Alerts</button>
+                <button class="botYellow" id="botRecursive3">Ugly Alert Callback?</button>
+            </div>
+            <div class="contentBox">
+                <span class="inBoxTitle teal">Input Boxes!</span>
+                <p>Get values from an Input box!</p>
+                <button id="botInputBox1" class="botTeal">InputBox</button>
+                <button id="botInputBox2" class="botTeal">Input Login</button>
+                <button id="botInputBox3" class="botTeal">Input With Select</button>
+            </div>
+            <p class="pSpacer" />
+            <br />
+            <span class="title pink">Extras</span>
+            <span class="subtitle">Side Panel and Loading Screen!</span>
+            <br /><br />
+            <div class="contentBox">
+                <span class="inBoxTitle teal">Loadings</span>
+                <p>Change the time, loading picture, the tittle and content!</p>
+                <button class="botTeal" id="botLoading1">Load 1</button>
+                <button class="botTeal" id="botLoading2">Load 2</button>
+                <button class="botTeal" id="botLoading3">Load 3</button>
+                <button class="botTeal" id="botLoading4">Load 4</button>
+                <br /><br />
+                <span class="inBoxTitle pink">Special Loadings!</span>
+                <p>When a custom image is not enough</p>
+                <button class="botPink" id="botLoadingSpecial1">Special 1</button>
+                <button class="botPink" id="botLoadingSpecial2">Special 2</button>
+                <button class="botPink" id="botLoadingSpecial3">Special 3</button>
+                <br /><br />
+                <span class="inBoxTitle purp">Secondary Pages!</span>
+                <p>Open different menu or page</p>
+                <a href="secondary.html" class="OpenSideBar"><button class="botPurp" id="botMessage1">Secondary</button></a>
+            </div>
+            <div align="center">
+                <span class="inBoxTitle red">Available only in</span>
+                <a href="http://www.scriptgates.com" target="_blank">
+                    <img src="static/img/codecanyon.gif" />
+                </a>
+            </div>
+            <p class="pSpacer" />
+        </div>
+        <script type="text/javascript">
+            $("#botLoading1").click(function() {
+                $.MetroLoading({
+                    title: "Loading",
+                    content: "Please wait 5 seconds",
+                    timeout: 5000,
+                    img: "static/img/load1.gif"
+                }, function() {
+                    alert("Finish!")
+                })
+            });
+            $("#botLoading2").click(function() {
+                $.MetroLoading({
+                    title: "Load is different",
+                    content: "Now, wait 4 seconds.",
+                    img: "static/img/load3.gif",
+                    timeout: 4000
+                }, function() {
+                    alert("Finish!")
+                })
+            });
+            $("#botLoading3").click(function() {
+                $.MetroLoading({
+                    title: "Loading",
+                    content: "Now, wait 4 seconds.. custom loading gif",
+                    timeout: 4000,
+                    img: "static/img/load2.gif"
+                }, function() {
+                    alert("Finish!")
+                })
+            });
+            $("#botLoading4").click(function() {
+                $.MetroLoading({
+                    title: "With no Image",
+                    content: "Now, wait 4 seconds.",
+                    timeout: 4000
+                }, function() {
+                    alert("Finish!")
+                })
+            });
+            $("#botLoadingSpecial1").click(function() {
+                $.MetroLoading({
+                    title: "Now we are loading...",
+                    content: "Please wait until the process finish...",
+                    timeout: 9000,
+                    special: true
+                }, function() {
+                    alert("Finish!")
+                })
+            });
+            $("#botLoadingSpecial2").click(function() {
+                $.MetroLoading({
+                    title: "Working for you...",
+                    content: "Please rate 5 stars if you like it!",
+                    img: "static/img/load3.gif",
+                    timeout: 9000,
+                    special: true
+                }, function() {
+                    alert("Finish!")
+                })
+            });
+            $("#botLoadingSpecial3").click(function() {
+                $.MetroLoading({
+                    title: "This loading will never stop.",
+                    content: "Until you call 'MetroUnLoading' function!",
+                    timeout: 1000000,
+                    special: true
+                }, function() {
+                    alert("Finish!")
+                });
+                setTimeout(function() {
+                    var a = "";
+                    $("#MetroUnloadingButton").show();
+                    $("body").append(a)
+                }, 7000)
+            });
+
+            function Close() {
+                MetroUnLoading();
+                $("#MetroUnloadingButton").hide()
+            }
+        </script>
+
+        <script type="text/javascript">
+            $("#botSmallPic1 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "With picture, timeout 4 seconds, no icon and custom color.",
+                    timeout: 4000,
+                    color: "#ec008c ",
+                    img: "static/img/pic1.png "
+                })
+            });
+            $("#botSmallPic2 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "Different picture, timeout 4 seconds, no icon and custom color.",
+                    color: "#92278f",
+                    timeout: 4000,
+                    img: "static/img/pic2.png"
+                })
+            });
+            $("#botSmallPic3 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "Different picture, timeout 4 seconds, no icon and custom color.",
+                    color: "#000000",
+                    timeout: 4000,
+                    img: "static/img/pic3.png"
+                })
+            });
+            $("#botSimple1 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "No Picture, 4 seconds timeout, no icon and custom color.",
+                    color: "#1ba1e2",
+                    timeout: 4000
+                })
+            });
+            $("#botSimple2 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "No Picture, 4 seconds timeout, no icon and custom color.",
+                    color: "#a4c400 ",
+                    timeout: 4000
+                })
+            });
+            $("#botSimple3 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "No Picture, 4 seconds timeout, no icon and custom color.",
+                    color: "#ec008c ",
+                    timeout: 4000
+                })
+            });
+            $("#botSmallCustom1 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "Picture, No timeout, with phone icon, custom color and Callback on closing.",
+                    color: "#fa6800 ",
+                    img: "static/img/pic2.png ",
+                    icon: "static/img/iphone.png "
+                }, function() {
+                    alert("Hi there, you are calling a callback function !")
+                })
+            });
+            $("#botSmallCustom2 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "No Picture, No timeout, with cloud icon, custom color and Callback function ",
+                    color: "#a4c400 ",
+                    icon: "static/img/cloud.png "
+                }, function() {
+                    alert("Hi there, you are calling a callback function !")
+                })
+            });
+            $("#botSmallCustom3 ").click(function() {
+                $.smallBox({
+                    title: "Small Information box ",
+                    content: "No Picture, 4 seconds timeout, no icon, custom color and Callback function ",
+                    color: "#1ba1e2",
+                    icon: "static/img/calendar.png"
+                }, function() {
+                    alert("Hi there, you are calling a callback function!")
+                })
+            });
+
+            $("#BigBox1 ").click(function() {
+                $.bigBox({
+                    title: "Big Information box ",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet.",
+                    color: "#fa6800 ",
+                    timeout: 8000,
+                    img: "static/img/members.png ",
+                    number: "1 "
+                })
+            });
+            $("#BigBox2 ").click(function() {
+                $.bigBox({
+                    title: "Big Information box ",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet.",
+                    color: "#d80073 ",
+                    timeout: 8000,
+                    img: "static/img/iphone.png ",
+                    number: "23 "
+                })
+            });
+            $("#BigBox3 ").click(function() {
+                $.bigBox({
+                    title: "Big Information box ",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet.",
+                    color: "#1ba1e2",
+                    timeout: 8000,
+                    img: "static/img/cloud.png",
+                    number: "3"
+                })
+            });
+            $("#BigBoxCall1 ").click(function() {
+                $.bigBox({
+                    title: "Big Information box ",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet.",
+                    color: "#f472d0 ",
+                    img: "static/img/cloud.png ",
+                    number: "5 "
+                })
+            });
+            $("#BigBoxCall2 ").click(function() {
+                $.bigBox({
+                    title: "Big Information box ",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet.",
+                    color: "#1ba1e2",
+                    img: "static/img/iphone.png",
+                    number: "2"
+                })
+            });
+            $("#BigBoxCall3 ").click(function() {
+                $.bigBox({
+                    title: "Big Information box ",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco.Lorem ipsum dolor sit amet.",
+                    color: "#6a00ff",
+                    img: "static/img/members.png",
+                    number: "7"
+                })
+            });
+        </script>
+
+
+
+        <script type="text/javascript">
+            $("#botMessage1 ").click(function() {
+                $.MetroMessageBox({
+                    title: "Metro Notifications !! !",
+                    content: "This is a confirmation box.You can change the color of the buttons if you want.",
+                    NormalButton: "#232323",
+                    ActiveButton: "# 0050ef "
+                })
+            });
+            $("#botMessage2 ").click(function() {
+                $.MetroMessageBox({
+                    title: "Metro Notifications !! !",
+                    content: "A lot of text !! !, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+                    NormalButton: "#232323",
+                    ActiveButton: "#a20025 "
+                })
+            });
+            $("#botMessage3 ").click(function() {
+                $.MetroMessageBox({
+                    title: " < span style = 'color: #f472d0;' > Metro PINK !! < /span>",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+                    NormalButton: "#232323",
+                    ActiveButton: "#f472d0"
+                })
+            });
+            $("#botMultiMessage1").click(function() {
+                $.MetroMessageBox({
+                    title: "Metro Notifications!!!",
+                    content: "This is a confirmation box. You can change the color of the buttons if you want.",
+                    NormalButton: "#232323",
+                    ActiveButton: "#008a00",
+                    buttons: "[No][Yes]"
+                })
+            });
+            $("#botMultiMessage2").click(function() {
+                $.MetroMessageBox({
+                    title: "Metro Notifications!!!",
+                    content: "This is a confirmation box. You can change the color of the buttons if you want.",
+                    NormalButton: "#232323",
+                    ActiveButton: "#008a00",
+                    buttons: "[Cancel][No][Yes]"
+                })
+            });
+            $("#botMultiMessage3").click(function() {
+                $.MetroMessageBox({
+                    title: "Metro Notifications!!!",
+                    content: "This is a confirmation box. You can change the color of the buttons if you want.",
+                    NormalButton: "#232323",
+                    ActiveButton: "#008a00",
+                    buttons: "[Need?][You][Do][Buttons][Many][How]"
+                })
+            });
+            $("#botRecursive1").click(function() {
+                $.MetroMessageBox({
+                    title: "Metro Notifications!!!",
+                    content: "Recursive Messagebox... Just press the button ok?",
+                    NormalButton: "#232323",
+                    ActiveButton: "#e51400",
+                    buttons: "[C'mon bro...]"
+                }, function() {
+                    $.MetroMessageBox({
+                        title: "Metro Notifications!!!",
+                        content: "You can call another one if you want. <br/ > Wait a second...the button has a different color ? ",
+                        NormalButton: "#232323",
+                        ActiveButton: "#f0a30a ",
+                        buttons: " [Thank You !! ]"
+                    })
+                })
+            });
+            $("#botRecursive2 ").click(function() {
+                $.MetroMessageBox({
+                    title: "Metro Notifications !! !",
+                    content: "Recursive Messagebox...Just press the button ok ? ",
+                    NormalButton: "#232323",
+                    ActiveButton: "#e51400 ",
+                    buttons: " [This is going to be Legend...]"
+                }, function() {
+                    $.MetroMessageBox({
+                        title: "Metro Notifications !! !",
+                        content: "Recursive Messagebox...Just press the button ok ? ",
+                        NormalButton: "#232323",
+                        ActiveButton: "#f0a30a ",
+                        buttons: " [wait for it...]"
+                    }, function() {
+                        $.MetroMessageBox({
+                            title: "Metro Notifications !! !",
+                            content: "This is a confirmation box.You can change the color of the buttons if you want.",
+                            NormalButton: "#232323",
+                            ActiveButton: "#008a00 ",
+                            buttons: " [..........dary]"
+                        })
+                    })
+                })
+            });
+            $("#botRecursive3 ").click(function() {
+                $.MetroMessageBox({
+                    title: "Metro Notifications !! !",
+                    content: "Show the name of the button pressed in a common alert.",
+                    NormalButton: "#232323",
+                    ActiveButton: "#008a00 ",
+                    buttons: " [Need ? ][You][Do][Buttons][Many][How]"
+                }, function(a) {
+                    alert("Hey there...you presss " + a + " !! !")
+                })
+            });
+        </script>
+
+        <script type="text/javascript">
+            $("#botInputBox1 ").click(function() {
+                $.MetroMessageBox({title: "Metro Notifications !! !",
+                    content: "Please enter your user name ",
+                    NormalButton: "#232323",
+                    ActiveButton: "#1ba1e2 ",
+                    buttons: " [Accept]",
+                    input: "text ",
+                    placeholder: "Enter your user name "},
+                function(b, a) {
+                    alert(b + "" + a)
+                })
+            });
+            $("#botInputBox2 ").click(function() {
+
+                $.MetroMessageBox({
+                    title: "Login form ",
+                    content: "Please enter your user name ",
+                    NormalButton: "#232323",
+                    ActiveButton: "#1ba1e2 ",
+                    buttons: "[Cancel][Accept]",
+                    input: "text ",
+                    placeholder: "Enter your user name "},
+                function(b, a) {
+                    if (b == "Cancel ") {
+                        alert("Why do you cancel that ? ");
+                        return 0
+                    }
+                    Value1 = a.toUpperCase();
+                    ValueOriginal = a;
+
+                    $.MetroMessageBox({
+                        title: Value1,
+                        content: "And now your password.",
+                        NormalButton: "#232323",
+                        ActiveButton: "#1ba1e2 ",
+                        buttons: " [Login]",
+                        input: "password ",
+                        placeholder: "Password "},
+                    function(d, c) {
+                        alert("Username : " + ValueOriginal + "and your password is : " + c)
+                    })
+                })
+            });
+            $("#botInputBox3 ").click(function() {
+
+                $.MetroMessageBox({
+                    title: "Metro Notifications !! !",
+                    content: "You can even create a group of options.",
+                    NormalButton: "#232323",
+                    ActiveButton: "#1ba1e2 ",
+                    buttons: " [I choose]",
+                    input: "select ", options: " [Costa Rica][United States][Autralia][Spain]"},
+                function(b, a) {
+                    alert(b + "" + a)
+                })
+            });
+        </script>
+    </body>
+</html>

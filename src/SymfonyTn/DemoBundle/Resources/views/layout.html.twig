@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ parent() }}SymfonyTn Demo News
+{% endblock title %}
+    
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets 
+        'bundles/symfonytndemo/third-party/theme/style.css'
+        'bundles/symfonytndemo/third-party/theme/tabcontent.css'
+        filter='cssrewrite' 
+         %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock stylesheets %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+    {% javascripts
+        'bundles/symfonytndemo/third-party/theme/tabcontent.js'
+         %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock javascripts %}
+
+{% block body %}{% endblock %} 

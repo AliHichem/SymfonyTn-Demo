@@ -1,0 +1,5 @@
+symfony_tn_demo_news:
+    pattern:  /
+    defaults: { _controller: SymfonyTnDemoBundle:Home:index }
+    requirements:
+        _method: GET

@@ -1,0 +1,20 @@
+SymfonyTn\DemoBundle\Entity\News:
+    type: entity
+    table: news
+    repositoryClass: SymfonyTn\DemoBundle\Repository\NewsRepository
+    id:
+      id:
+        type: bigint
+        generator:
+            strategy: IDENTITY
+    fields:
+      title:
+        type: string
+        length: 255
+        nullable: true
+      description:
+        type: text
+        nullable: true
+      created:
+        type: datetime
+        nullable: true

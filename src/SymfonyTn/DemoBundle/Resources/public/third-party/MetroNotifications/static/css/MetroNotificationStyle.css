@@ -1,0 +1,449 @@
+/* FREE FOR YOU BY SCRIPTGATES.COM! */
+.divMessageBox {
+width:100%;
+height:100%;
+position:fixed;
+top:0;
+left:0;
+background:rgba(0,0,0,0.6);
+z-index:100000;
+}
+
+.MessageIE {
+background-image:url(../img/bg.png);
+}
+
+.MessageBoxContainer {
+top:35%;
+color:#FFF;
+position:relative;
+width:100%;
+background-color:#232323;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.MessageBoxButtonSection {
+width:100%;
+height:30px;
+}
+
+.MessageBoxButtonSection button {
+float:right;
+color:#FFF;
+margin-right:5px;
+font-family:arial;
+border-color:#FFF;
+border-style:solid;
+border-width:2px;
+padding:5px 15px;
+}
+
+.MessageBoxButtonSection button:hover {
+background-color:red;
+}
+
+.LoadingBoxContainer {
+top:20%;
+color:#FFF;
+position:relative;
+width:100%;
+background-color:#232323;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+#LoadingPoints {
+position:absolute;
+}
+
+.bigBox {
+position:fixed;
+right:10px;
+bottom:10px;
+background-color:#004d60;
+width:390px;
+height:150px;
+color:#FFF;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+z-index:99999;
+padding:10px 10px 5px;
+}
+
+.bigBox p {
+font-size:14px;
+margin-top:2px;
+}
+
+#divMiniIcons {
+float:right;
+position:fixed;
+width:430px;
+right:10px;
+bottom:180px;
+z-index:9999;
+}
+
+.botClose {
+position:absolute;
+right:10px;
+height:15px;
+width:15px;
+cursor:pointer;
+}
+
+#divMiniIcons .cajita {
+background-color:red;
+width:30.5px;
+height:30.5px;
+float:right;
+cursor:pointer;
+display:block;
+margin:2px 2px 0;
+}
+
+.cajita img {
+width:23px;
+height:23px;
+padding-left:3px;
+padding-top:3px;
+}
+
+.bigBox .bigboxicon {
+width:100px;
+float:left;
+margin:0;
+}
+
+.bigBox .bigboxnumber {
+width:220px;
+float:left;
+text-align:right;
+font-size:25px;
+margin:2px 0 0;
+}
+
+#divSmallBoxes {
+position:fixed;
+right:0;
+top:0;
+}
+
+.SmallBox {
+position:absolute;
+right:0;
+top:20px;
+padding-right:30px;
+width:420px;
+color:#FFF;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+z-index:9999;
+}
+
+.SmallBox:hover {
+box-shadow:0 0 10px #888;
+cursor:pointer;
+}
+
+.SmallBox .foto {
+width:100px;
+height:100px;
+float:left;
+margin:-10px -10px 2em;
+}
+
+.SmallBox .textoFull {
+width:93%;
+float:left;
+padding-left:20px;
+}
+
+.SmallBox .textoFoto {
+width:65%;
+float:left;
+margin:0 20px;
+}
+
+.miniPic {
+position:absolute;
+bottom:5px;
+}
+
+.miniIcono {
+height:100%;
+}
+
+.SmallBox p {
+font-size:12px;
+margin-top:2px;
+}
+
+#pageslide {
+display:none;
+position:fixed;
+top:0;
+height:100%;
+z-index:999999;
+width:305px;
+background-color:#004d60;
+color:#FFF;
+-webkit-box-shadow:inset 0 0 5px 5px #222;
+-moz-shadow:inset 0 0 0 0 #222;
+box-shadow:inset 0 0 0 0 #222;
+padding:20px;
+}
+
+.purehtml {
+color:#FFF;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+font-size:16px;
+}
+
+@font-face {
+font-family:Quattro;
+src:url(Quattrocento-Regular.otf);
+}
+
+.animated {
+-webkit-animation-duration:1s;
+-moz-animation-duration:1s;
+-o-animation-duration:1s;
+animation-duration:1s;
+-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+animation-fill-mode:both;
+}
+
+.animated.fast {
+-webkit-animation-duration:.4s;
+-moz-animation-duration:.4s;
+-ms-animation-duration:.4s;
+-o-animation-duration:.4s;
+animation-duration:.4s;
+}
+
+100% {
+-webkit-transform:translateX(-20px);
+-moz-transform:translateX(-20px);
+-o-transform:translateX(-20px);
+opacity:0;
+transform:translateX(-20px);
+}
+
+.fadeIn {
+-webkit-animation-name:fadeIn;
+-moz-animation-name:fadeIn;
+-o-animation-name:fadeIn;
+animation-name:fadeIn;
+}
+
+.fadeInRight {
+-webkit-animation-name:fadeInRight;
+-moz-animation-name:fadeInRight;
+-o-animation-name:fadeInRight;
+animation-name:fadeInRight;
+}
+
+.fadeInUp {
+-webkit-animation-name:fadeInUp;
+-moz-animation-name:fadeInUp;
+-o-animation-name:fadeInUp;
+animation-name:fadeInUp;
+}
+
+.fadeOut {
+-webkit-animation-name:fadeOut;
+-moz-animation-name:fadeOut;
+-o-animation-name:fadeOut;
+animation-name:fadeOut;
+}
+
+.fadeOutLeft {
+-webkit-animation-name:fadeOutLeft;
+-moz-animation-name:fadeOutLeft;
+-o-animation-name:fadeOutLeft;
+animation-name:fadeOutLeft;
+}
+
+.MessageBoxMiddle,.LoadingBoxMiddle {
+position:relative;
+left:20%;
+width:50%;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+padding:10px;
+}
+
+.MessageBoxMiddle .MsgTitle,.LoadingBoxContainer .MsgTitle {
+font-size:26px;
+}
+
+.MessageBoxMiddle .pText,.LoadingBoxContainer .pText {
+font-style:30px;
+}
+
+.MessageBoxContainer input,.MessageBoxContainer select {
+width:50%;
+padding:5px;
+}
+
+.bigBox span,.SmallBox span {
+font-size:22px;
+}
+
+@media screen and max-width 450px and max-width 767px{
+#divSmallBoxes {
+position:fixed;
+width:90%;
+right:0;
+top:0;
+}
+
+.SmallBox {
+position:absolute;
+right:0;
+top:20px;
+padding-right:30px;
+width:100%;
+color:#FFF;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+z-index:9999;
+}
+
+.SmallBox:hover {
+box-shadow:0 0 10px #888;
+cursor:pointer;
+}
+
+.SmallBox span {
+font-size:16px;
+}
+
+.SmallBox .foto {
+width:100px;
+height:100px;
+float:left;
+margin:-10px -10px 2em;
+}
+
+.SmallBox .textoFull {
+width:93%;
+float:left;
+padding-left:20px;
+}
+
+.SmallBox .textoFoto {
+width:55%;
+float:left;
+margin:0 15px;
+}
+
+.bigBox {
+position:fixed;
+right:10px;
+bottom:10px;
+background-color:#004d60;
+width:88%;
+height:150px;
+color:#FFF;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+z-index:99999;
+padding:10px 10px 5px;
+}
+
+.bigBox span {
+font-size:19px;
+}
+
+#divMiniIcons {
+float:right;
+position:fixed;
+right:10px;
+bottom:180px;
+z-index:9999;
+}
+
+.botClose {
+position:absolute;
+right:10px;
+height:20px;
+width:20px;
+}
+
+.bigBox .bigboxicon {
+width:100px;
+float:left;
+margin:0;
+}
+
+.bigBox .bigboxnumber {
+position:fixed;
+width:220px;
+float:left;
+text-align:right;
+font-size:25px;
+margin:2px 0 0;
+}
+
+.divMessageBox {
+width:100%;
+height:100%;
+position:fixed;
+top:0;
+left:0;
+background:rgba(0,0,0,0.6);
+z-index:100000;
+}
+
+.MessageBoxContainer {
+top:25%;
+color:#FFF;
+position:relative;
+width:100%;
+background-color:#232323;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.MessageBoxMiddle {
+position:relative;
+left:10%;
+width:80%;
+font-family:'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+padding:3px;
+}
+
+.MessageBoxMiddle .MsgTitle {
+font-size:22px;
+}
+
+.MessageBoxMiddle .pText {
+font-style:10px;
+}
+
+.MessageBoxButtonSection {
+width:100%;
+height:30px;
+}
+
+.MessageBoxButtonSection button {
+float:right;
+color:#FFF;
+margin-right:5px;
+font-family:arial;
+border-color:#FFF;
+border-style:solid;
+border-width:2px;
+padding:5px 15px;
+}
+
+.MessageBoxButtonSection button:hover {
+background-color:red;
+}
+
+.SmallBox p,.bigBox p {
+font-size:12px;
+margin-top:2px;
+}
+
+.MessageBoxContainer input,.MessageBoxContainer select {
+width:50%;
+padding:5px;
+}

@@ -1,0 +1,22 @@
+{
+    "name": "SymfonyTn-Demo",
+    "version": "1.0.0",
+    "title": "SymfonyTn-Demo",
+    "description": "Node.js push server",
+    "keywords": [
+        "websocket",
+        "redis",
+        "node"
+    ],
+    "homepage": "",
+    "author": {
+        "name": "Ali hichem",
+        "email": "ali.hichem@mail.com"
+    },
+    "dependencies": {
+        "redis":        "0.8.1",
+        "socket.io":    "0.9.10",
+        "js-yaml"  :    "2.0.x"
+    },
+    "main": "server.js"
+}

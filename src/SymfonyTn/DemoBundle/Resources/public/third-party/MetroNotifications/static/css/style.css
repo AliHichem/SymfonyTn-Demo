@@ -1,0 +1,248 @@
+/* ====================================
+
+Basic CSS for the demo
+
+==================================== */
+body{
+	/*background-color: black;*/
+	padding-top: 20px;
+}
+
+p{
+	margin-top: 0px;
+}
+
+#MetroUnloadingButton{
+	z-index: 1000000;
+	position: fixed;
+	top: 300px;
+	left: 300px;
+	background-color: #1ba1e2;
+}
+
+#MetroUnloadingButton:hover{
+	background-color: #178ec7;
+}
+
+.BoxContainer{
+	position:absolute;
+	left: 25%;
+
+	margin-left: -50px;
+	width: 800px;
+	font-family: 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.title{
+	font-size: 40px;
+	margin-bottom: 0px;
+	display: block;
+}
+
+
+.subtitle{
+	position: relative;
+	top: -10px;
+	font-size: 23px;
+}
+
+.pSpacer{
+	height: 430px;
+}
+
+.inBoxTitle{
+	padding-top: 15px;
+	font-size: 23px;
+	display: block;
+	/*padding-left: 5px;*/
+}
+
+
+.contentBox{
+	width: 380px;
+	height: 380px;
+	/*background-color: red;*/
+
+	position: relative;
+	left: -7px;
+
+	margin: 0 8px 0em;
+    float: left;
+}
+
+.red{
+	color: #e51400;
+}
+
+.purp{
+	color: #92278f;
+}
+
+.botPurp{
+	background-color: #92278f;
+}
+
+.botPurp:hover{
+	background-color: #721f70;
+}
+
+.teal{
+	color: #1ba1e2;
+}
+
+.teal2{
+	color: #00aba9;
+}
+
+.white{
+	color: white;
+}
+
+.green{
+	color: #a4c400;
+}
+
+.orange{
+	color: #fa6800;
+}
+
+.tealBox{
+	background-color: #1ba1e2;
+}
+
+.purpBox{
+	background-color: #92278f;
+}
+
+.greenBox{
+	background-color: #a4c400;
+}
+
+.botGreen{
+	background-color: #a4c400;
+}
+.botGreen:hover{
+	background-color: #88a300;
+}
+
+.botTeal{
+	background-color: #1ba1e2;
+}
+.botTeal:hover{
+	background-color: #1588c0;
+}
+
+.botTeal2{
+	background-color: #00aba9;
+}
+
+.botTeal2:hover{
+	background-color: #008c8a;
+}
+
+.botOrange{
+	background-color: #fa6800;
+}
+
+.botOrange:hover{
+	background-color: #e35e00;
+}
+
+.pink{
+	color: #d80073;
+}
+
+.botPink{
+	background-color: #d80073;
+}
+
+.botPink:hover{
+	background-color: #bc0064;
+}
+
+.blue{
+	color: #0050ef;
+}
+
+.botBlue{
+	background-color: #0050ef;
+}
+
+.botBlue:hover{
+	background-color: #0044ca;
+}
+
+.yellow{
+	color: #d8c100;
+}
+
+.botYellow{
+	background-color: #d8c100;
+}
+.botYellow:hover{
+	background-color: #bba700;
+}
+
+button{
+	border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    color: white;
+    margin-right: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@font-face {
+    font-family: Quattro;
+    src: url('Quattrocento-Regular.otf');
+}
+
+@media screen and (max-width: 450px) and (max-width: 767px) {
+
+    
+.BoxContainer{
+	position:absolute;
+	/*margin-left: -50px;*/
+	width: 88%;
+	font-family: 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.contentBox{
+	width: 90%;
+	height: 600px;
+	/*background-color: red;*/
+
+	/*position: relative;*/
+	left: 0px;
+
+	margin: 0 8px 0em;
+    float: left;
+}
+
+
+.title{
+	font-size: 32px;
+	margin-bottom: 0px;
+	display: block;
+}
+
+
+.subtitle{
+	position: relative;
+	top: -10px;
+	font-size: 23px;
+}
+
+
+#MetroUnloadingButton{
+
+	position: fixed;
+	bottom: 100px;
+	left: 20px;
+
+}
+
+
+}

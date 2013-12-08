@@ -44,7 +44,7 @@ Now all what you have to do is to start your nodejs server with
 node node/server.js
 ```
 
-(of course for production use you will nead to daemonize it)
+(of course for production use you will need to daemonize it)
 
 Now every time you insert a new news from /admin/new all the connected users will see a realtime notification about that news.
 
